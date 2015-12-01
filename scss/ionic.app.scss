@@ -1,0 +1,228 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+.scroll-content{
+    background-color: #EEEEEE;
+}
+
+.bar-title{
+    font-size: 15px;
+    background-color: #ddd;
+    text-align: center;
+    padding: 10px;
+}
+
+.bar-search{
+    background-color: #DDDDDD;
+    padding: 5px 10px;
+}
+
+.pic-user{
+    width: 34px;
+    height: 34px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    img{
+        width: 100%;
+        max-width: 100%;
+        display: block;
+    }
+}
+
+.info-user{
+    margin-left: 10px;
+    .name{
+        font-size: 13px;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 0;
+    }
+
+    .oab-number{
+        font-size: 10px;
+        font-weight: bold;
+        color: #fff;
+    }
+}
+
+.button-config{
+    position: absolute;
+    right: 15px;
+
+    .button{
+        color: #fff !important;
+    }
+}
+
+
+.bg-menu{
+    background-color: $dark;
+
+    .menu-list{
+        .list{
+            padding: 10px;
+
+            .item{
+                background-color: transparent;
+                border: 0;
+
+                .item-content{
+                    background-color: transparent;
+                    color: #fff;
+                    font-size: 14px;
+                    font-weight: bold;
+
+                    .icon{
+                        margin-right: 10px;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//  button tabs
+
+.button-tabs{
+    margin: 20px 10px;
+
+    .button-bar{
+        border: 1px solid $balanced;
+        border-radius: 5px;
+        overflow: hidden;
+
+        .button{
+            padding: 5px 15px;
+            border: 0;
+            font-size: 12px;
+            font-weight: bold;
+
+            &.btn-atualizar{
+                background-color:$balanced;
+                color: #fff;
+            }
+
+            &.btn-anotacoes{
+                background-color: #fff;
+                color: #666;
+            }
+        }
+
+    }
+
+}
+
+
+// widgets
+
+.item-widget{
+    border: 1px solid #979797;
+    background-color: #fff;
+    margin: 20px 10px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    &.box-detail-processo{
+        margin-top: 0px
+    }
+
+    .widget-header{
+        padding: 10px 15px;
+        border-bottom: 1px solid #979797;
+        position: relative;
+        background-color: #F7F7F7;
+
+        .titulo{
+            color: $positive;
+            font-size: 14px;
+            margin: 0;
+            font-weight: bold;
+            padding-right: 30px;
+        }
+
+        .link-see{
+            display: block;
+            position: absolute;
+            right: 15px;
+            top: 3px;
+            font-size: 30px;
+            color: $energized;
+
+        }
+    }
+
+    .widget-body{
+
+
+        .widget-list-info{
+
+            li{
+                padding: 10px 15px;
+                border-bottom: 1px solid #979797;
+
+                &:last-child{
+                    border: 0;
+                }
+
+                .info-title{
+                    display: inline-block;
+                    width: 75px;
+                    vertical-align: top;
+
+                    p{
+                        color: #666;
+                        margin-bottom: 0;
+                        font-size: 12px;
+                    }
+
+                    .icon{
+                        font-size: 20px;
+                    }
+                }
+
+                .info-detail{
+                    display: inline-block;
+                    width: 75.5%;
+
+                    span{
+                        display: block;
+                        color: #666;
+                        font-size: 12px;
+                    }
+
+                    p{
+                        color: $energized;
+                        margin-bottom: 0;
+                    }
+
+                    &.desc{
+                        width: 100%
+                    }
+
+                }
+            }
+        }
+    }
+}

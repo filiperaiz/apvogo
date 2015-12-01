@@ -1,0 +1,53 @@
+<ion-view view-title="Meu Painel">
+    <ion-content>
+        <div class="bar bar-header bar-positive">
+            <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                </button>
+            <div class="h1 title">Meu Painel</div>
+            <button class="button button-icon button-clear ion-ios-plus-outline"></button>
+        </div>
+
+
+        <div class="list-processos">
+            <h2 class="bar-title">Últimos processos adicionados</h2>
+            <ion ng-repeat="processo in processos">
+                <div class="item-processo item-widget">
+                    <div class="widget-header">
+                        <h4 class="titulo">{{processo.title}}</h4>
+                        <a class="link-see" href="#/app/processos/{{processo.id}}">
+                            <i class="icon ion-eye"></i>
+                        </a>
+                    </div>
+                    <div class="widget-body">
+                        <ul class="widget-list-info">
+                            <li>
+                                <div class="info-title">
+                                    <p>Processo</p>
+                                </div>
+                                <div class="info-detail">
+                                    <p>(068.01.2012.001092),0001092.068.01.2012.001092</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-title">
+                                    <p>Classe</p>
+                                </div>
+                                <div class="info-detail">
+                                    <p>Recuperação Judicial</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-title">
+                                    <p>Atualizado</p>
+                                </div>
+                                <div class="info-detail">
+                                    <p>28/10/2015</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </ion>
+        </div>
+    </ion-content>
+</ion-view>
