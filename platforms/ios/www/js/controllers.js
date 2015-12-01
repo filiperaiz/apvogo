@@ -41,8 +41,12 @@ angular.module('starter.controllers', [])
   };
 })
 
-// .controller('homeCtrl', function($scope, $stateParams) {
-// })
+.controller('headerCtrl', function($scope, $ionicHistory) {
+  $scope.myGoBack = function() {
+    $ionicHistory.goBack();
+  };
+})
+
 
 
 .controller('PainelCtrl', function($scope) {
@@ -58,14 +62,12 @@ angular.module('starter.controllers', [])
 
 
 .controller('itemProcessoCtrl', function($scope, $stateParams) {
-
-
 })
+
 
 .controller('NotesCtrl', function($scope, $stateParams) {
-
-
 })
+
 
 .controller('ProcessosCtrl', function($scope, $stateParams) {
   $scope.processos = [
@@ -74,7 +76,6 @@ angular.module('starter.controllers', [])
     { title: 'TJSP Completo 000111', id: 3 },
     { title: 'TJSP Completo 000112', id: 4 }
   ];
-
 });
 
 
