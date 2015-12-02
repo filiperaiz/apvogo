@@ -1,4 +1,11 @@
 <ion-view view-title="Processos">
+
+    <!-- nav header button -->
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-ios-plus-outline" ng-click="modal.show()"></button>
+    </ion-nav-buttons>
+    <!-- nav header button -->
+
     <ion-content>
         <div class="bar-search item-input-inset">
           <label class="item-input-wrapper">
@@ -10,17 +17,6 @@
           </button>
         </div>
         <div class="list-processos">
-
-            <div class="button-tabs">
-                <div class="button-bar">
-                    <button class="button button-small btn-atualizar">
-                        Atualizar
-                    </button>
-                    <a class="button button-small btn-anotacoes" >
-                        Adicionar processo
-                    </a>
-                </div>
-            </div>
 
             <ion ng-repeat="processo in processos">
                 <div class="item-processo item-widget">
@@ -40,7 +36,22 @@
                                     <p>(068.01.2012.001092),0001092.068.01.2012.001092</p>
                                 </div>
                             </li>
-
+                            <li>
+                                <div class="info-title">
+                                    <p>Classe</p>
+                                </div>
+                                <div class="info-detail">
+                                    <p>Recuperação Judicial</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-title">
+                                    <p>Atualizado</p>
+                                </div>
+                                <div class="info-detail">
+                                    <p>28/10/2015</p>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -48,3 +59,27 @@
         </div>
     </ion-content>
 </ion-view>
+
+<script id="templates/modal-add-processo.html" type="text/ng-template">
+    <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-royal">
+            <h1 class="title">Adicionar</h1>
+            <button class="button button-clear  button-icon ion-close-round" ng-click="modal.hide()"></button>
+        </ion-header-bar>
+        <ion-content class="padding">
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">Nome</span>
+                    <input ng-model="newUser.firstName" type="text">
+                </label>
+                <label class="item item-input">
+
+                    <textarea placeholder="Comentario" cols="30" rows="10"></textarea>
+
+                </label>
+
+                <button class="button button-full button-royal button icon-left ion-checkmark-round button-positive" ng-click="createContact(newUser)">Salvar</button>
+            </div>
+        </ion-content>
+    </ion-modal-view>
+</script>

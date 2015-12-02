@@ -49,24 +49,6 @@ angular.module('starter.controllers', [])
 
 
 
-.controller('PainelCtrl', function($scope) {
-  $scope.processos = [
-    { title: 'TJSP Completo 000109…', id: 1 },
-    { title: 'TJSP Completo 000110…', id: 2 },
-    { title: 'TJSP Completo 000111', id: 3 },
-    { title: 'TJSP Completo 000112', id: 4 }
-  ];
-})
-
-
-
-
-.controller('itemProcessoCtrl', function($scope, $stateParams) {
-})
-
-
-.controller('NotesCtrl', function($scope, $stateParams) {
-})
 
 
 .controller('ProcessosCtrl', function($scope, $stateParams) {
@@ -76,6 +58,17 @@ angular.module('starter.controllers', [])
     { title: 'TJSP Completo 000111', id: 3 },
     { title: 'TJSP Completo 000112', id: 4 }
   ];
+})
+
+
+
+.controller('itemProcessoCtrl', function($scope, $stateParams) {
+})
+
+
+.controller('NotesCtrl', function($scope, $stateParams) {
 });
+
+
 
 

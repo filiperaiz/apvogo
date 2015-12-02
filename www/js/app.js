@@ -34,17 +34,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         controller: 'AppCtrl'
     })
 
-    .state('app.painel', {
-        url: '/painel',
-        views: {
-            'menuContent': {
-                templateUrl: 'templates/painel.html',
-                controller: 'PainelCtrl'
-            }
-        }
-    })
-
-
+// Processos
     .state('app.processos', {
         url: '/processos',
         views: {
@@ -86,6 +76,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
 
 
+
     .state('app.search', {
         url: '/search',
         views: {
@@ -109,5 +100,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
 
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/painel');
+    $urlRouterProvider.otherwise('/app/processos');
 });
