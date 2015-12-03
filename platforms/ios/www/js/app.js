@@ -45,6 +45,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
     })
 
+    .state('app.add-processo', {
+        url: '/add_processo',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/add-processo.html',
+                controller: 'addProcessoCtrl'
+            }
+        }
+    })
+
     .state('app.item_processo', {
         url: '/processos/:item_processoId',
         views: {
@@ -56,6 +66,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
     })
 
+// Notas
     .state('app.notes', {
         url: '/processos/:item_processoId/notes',
         views: {
@@ -65,6 +76,107 @@ angular.module('starter', ['ionic', 'starter.controllers'])
             }
         }
     })
+
+    .state('app.add-nota', {
+        url: '/add_nota',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/add-nota.html',
+                controller: 'addNotaCtrl'
+            }
+        }
+    })
+
+// honorario
+    .state('app.honorarios', {
+        url: '/processos/:item_processoId/honorarios',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/honorarios.html',
+                controller: 'HonorariosCtrl'
+            }
+        }
+    })
+
+    .state('app.add-honorario', {
+        url: '/add_honorario',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/add-honorario.html',
+                controller: 'addHonorarioCtrl'
+            }
+        }
+    })
+
+
+
+
+// Clientes
+
+    .state('app.clientes', {
+        url: '/clientes',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/clientes.html',
+                controller: 'ClientesCtrl'
+            }
+        }
+    })
+
+    .state('app.add-cliente', {
+        url: '/add_cliente',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/add-cliente.html',
+                controller: 'addClienteCtrl'
+            }
+        }
+    })
+
+    .state('app.item_cliente', {
+        url: '/clientes/:item_clienteId',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/item_cliente.html',
+                controller: 'itemClienteCtrl',
+
+            }
+        }
+    })
+
+
+// Financeiro
+
+    .state('app.financeiro', {
+        url: '/financeiro',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/financeiro.html',
+                controller: 'FinanceiroCtrl'
+            }
+        }
+    })
+
+    // .state('app.add-cliente', {
+    //     url: '/add_cliente',
+    //     views: {
+    //         'menuContent': {
+    //             templateUrl: 'templates/add-cliente.html',
+    //             controller: 'addClienteCtrl'
+    //         }
+    //     }
+    // })
+
+    // .state('app.item_cliente', {
+    //     url: '/clientes/:item_clienteId',
+    //     views: {
+    //         'menuContent': {
+    //             templateUrl: 'templates/item_cliente.html',
+    //             controller: 'itemClienteCtrl',
+
+    //         }
+    //     }
+    // })
 
 
 

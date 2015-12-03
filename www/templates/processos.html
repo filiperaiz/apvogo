@@ -7,6 +7,14 @@
     <!-- nav header button -->
 
     <ion-content>
+
+        <!-- Refresh  -->
+        <ion-refresher
+          pulling-text="Atualizando..."
+          on-refresh="doRefresh()">
+        </ion-refresher>
+
+
         <div class="bar-search item-input-inset">
           <label class="item-input-wrapper">
             <i class="icon ion-ios-search placeholder-icon"></i>
@@ -16,6 +24,7 @@
             Buscar
           </button>
         </div>
+
         <div class="list-processos">
             <ion ng-repeat="processo in processos">
                 <div class="item-processo item-widget">
@@ -58,3 +67,4 @@
         </div>
     </ion-content>
 </ion-view>
+

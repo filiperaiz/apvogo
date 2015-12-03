@@ -87,7 +87,26 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
     })
 
+// honorario
+    .state('app.honorarios', {
+        url: '/processos/:item_processoId/honorarios',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/honorarios.html',
+                controller: 'HonorariosCtrl'
+            }
+        }
+    })
 
+    .state('app.add-honorario', {
+        url: '/add_honorario',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/add-honorario.html',
+                controller: 'addHonorarioCtrl'
+            }
+        }
+    })
 
 
 
@@ -124,6 +143,40 @@ angular.module('starter', ['ionic', 'starter.controllers'])
             }
         }
     })
+
+
+// Financeiro
+
+    .state('app.financeiro', {
+        url: '/financeiro',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/financeiro.html',
+                controller: 'FinanceiroCtrl'
+            }
+        }
+    })
+
+    // .state('app.add-cliente', {
+    //     url: '/add_cliente',
+    //     views: {
+    //         'menuContent': {
+    //             templateUrl: 'templates/add-cliente.html',
+    //             controller: 'addClienteCtrl'
+    //         }
+    //     }
+    // })
+
+    // .state('app.item_cliente', {
+    //     url: '/clientes/:item_clienteId',
+    //     views: {
+    //         'menuContent': {
+    //             templateUrl: 'templates/item_cliente.html',
+    //             controller: 'itemClienteCtrl',
+
+    //         }
+    //     }
+    // })
 
 
 

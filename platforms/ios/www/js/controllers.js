@@ -48,8 +48,8 @@ angular.module('starter.controllers', [])
     };
 })
 
-
-.controller('ProcessosCtrl', function($scope, $stateParams, $ionicModal) {
+// Processos
+.controller('ProcessosCtrl', function($scope, $stateParams, $ionicModal, $http) {
     $scope.processos = [{
         title: 'TJSP Completo 000109…',
         id: 1
@@ -64,7 +64,38 @@ angular.module('starter.controllers', [])
         id: 4
     }];
 
-     $ionicModal.fromTemplateUrl('templates/modal-add-processo.html', {
+
+
+    $scope.doRefresh = function() {
+        $http.get('/new-processos')
+            .success(function(newProcessos) {
+                $scope.processos = newProcessos;
+            })
+            .finally(function() {
+                // Stop the ion-refresher from spinning
+                $scope.$broadcast('scroll.refreshComplete');
+            });
+    };
+})
+
+.controller('addProcessoCtrl', function($scope, $stateParams) {
+})
+
+.controller('itemProcessoCtrl', function($scope, $ionicModal, $stateParams) {
+    $scope.doRefresh = function() {
+        $http.get('/item_processos')
+            .success(function(itemProcessos) {
+                $scope.item_processos = itemProcessos;
+            })
+            .finally(function() {
+                // Stop the ion-refresher from spinning
+                $scope.$broadcast('scroll.refreshComplete');
+            });
+    };
+
+
+
+    $ionicModal.fromTemplateUrl('templates/modal-add-cliente-processo.html', {
         scope: $scope
     }).then(function(modal) {
         $scope.modal = modal;
@@ -73,9 +104,83 @@ angular.module('starter.controllers', [])
 
 
 
-.controller('itemProcessoCtrl', function($scope, $stateParams) {})
+// Notas
+.controller('NotesCtrl', function($scope, $stateParams) {
+    $scope.notas = [{
+        title: 'nota 1',
+        id: 1
+    }, {
+        title: 'nota 2',
+        id: 2
+    }, {
+        title: 'nota 3',
+        id: 3
+    }, {
+        title: 'nota 4',
+        id: 4
+    }];
+})
+
+.controller('addNotaCtrl', function($scope, $stateParams) {})
 
 
-.controller('NotesCtrl', function($scope, $stateParams) {});
+
+// Honorarios
+.controller('HonorariosCtrl', function($scope, $stateParams) {})
+
+.controller('addHonorarioCtrl', function($scope, $stateParams) {})
 
 
+
+// Clientes
+.controller('ClientesCtrl', function($scope, $stateParams, $ionicModal) {
+    $scope.clientes = [{
+        title: 'Filipe Raiz',
+        id: 1
+    }, {
+        title: 'Renato Filho',
+        id: 2
+    }, {
+        title: 'Gustavo Carvalho',
+        id: 3
+    }, {
+        title: 'Gabriel',
+        id: 4
+    }];
+})
+
+.controller('addClienteCtrl', function($scope, $stateParams) {
+})
+
+.controller('itemClienteCtrl', function($scope, $stateParams) {
+})
+
+
+// Financeiro
+.controller('FinanceiroCtrl', function($scope, $stateParams, $ionicModal) {
+    $scope.meses = [{
+        title: 'Janeiro',
+        id: 1
+    }, {
+        title: 'Fevereiro',
+        id: 2
+    }, {
+        title: 'Março',
+        id: 3
+    },{
+        title: 'Abril',
+        id: 4
+    },
+    {
+        title: 'Maio',
+        id: 5
+    },
+    {
+        title: 'Junho',
+        id: 6
+    },
+     {
+        title: 'Julho',
+        id: 7
+    }];
+});

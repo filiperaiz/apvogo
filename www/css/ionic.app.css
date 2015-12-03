@@ -9160,16 +9160,12 @@ a.button {
       border: 0;
       font-size: 12px;
       font-weight: bold; }
-      .button-tabs .button-bar .button.btn-atualizar {
-        background-color: #3CAC5A;
-        color: #fff; }
-      .button-tabs .button-bar .button.btn-anotacoes {
-        background-color: #fff;
-        color: #666; }
-      .button-tabs .button-bar .button.btn-cliente {
+      .button-tabs .button-bar .button.btn-tab {
         background-color: #fff;
         color: #666;
         border-right: 1px solid #3CAC5A; }
+        .button-tabs .button-bar .button.btn-tab:last-child {
+          border: none; }
 
 .item-widget {
   border: 1px solid #979797;
@@ -9197,6 +9193,8 @@ a.button {
       top: 3px;
       font-size: 30px;
       color: #F59120; }
+      .item-widget .widget-header .link-see .ion-edit {
+        font-size: 18px; }
   .item-widget .widget-body .widget-list-info li {
     padding: 10px 15px;
     border-bottom: 1px solid #979797; }
@@ -9244,3 +9242,14 @@ a.button {
     display: block;
     font-size: 11px;
     color: #F59120; }
+
+.item-mes {
+  border: 1px solid #2379E2;
+  background-color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  padding: 35px 0; }
+  .item-mes a {
+    color: #F59120;
+    font-weight: bold;
+    text-decoration: none; }

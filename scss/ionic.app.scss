@@ -124,21 +124,17 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
             font-size: 12px;
             font-weight: bold;
 
-            &.btn-atualizar{
-                background-color:$balanced;
-                color: #fff;
-            }
-
-            &.btn-anotacoes{
-                background-color: #fff;
-                color: #666;
-            }
-
-            &.btn-cliente{
+            &.btn-tab{
                 background-color: #fff;
                 color: #666;
                 border-right: 1px solid $balanced;
+
+                &:last-child{
+                    border:none;
+                }
             }
+
+
         }
 
     }
@@ -181,6 +177,10 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
             top: 3px;
             font-size: 30px;
             color: $energized;
+
+            .ion-edit{
+                font-size:18px;
+            }
 
         }
     }
@@ -272,3 +272,19 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 }
 
 //  block buttons
+
+
+// Lista de meses
+.item-mes{
+            border: 1px solid $positive;
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    padding: 35px 0;
+
+    a{
+        color: $energized;
+        font-weight: bold;
+        text-decoration: none;
+    }
+}
