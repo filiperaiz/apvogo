@@ -9195,6 +9195,16 @@ a.button {
       color: #F59120; }
       .item-widget .widget-header .link-see .ion-edit {
         font-size: 18px; }
+  .item-widget .widget-body .saldo-total {
+    text-align: center;
+    font-size: 38px;
+    color: #000;
+    margin: 0;
+    padding: 25px 0; }
+    .item-widget .widget-body .saldo-total.positivo {
+      color: #3CAC5A; }
+    .item-widget .widget-body .saldo-total.negativo {
+      color: #ff0000; }
   .item-widget .widget-body .widget-list-info li {
     padding: 10px 15px;
     border-bottom: 1px solid #979797; }
@@ -9202,7 +9212,7 @@ a.button {
       border: 0; }
     .item-widget .widget-body .widget-list-info li .info-title {
       display: inline-block;
-      width: 75px;
+      width: 110px;
       vertical-align: top; }
       .item-widget .widget-body .widget-list-info li .info-title p {
         color: #666;
@@ -9213,7 +9223,7 @@ a.button {
         font-size: 20px; }
     .item-widget .widget-body .widget-list-info li .info-detail {
       display: inline-block;
-      width: 75.5%; }
+      width: 64.7%; }
       .item-widget .widget-body .widget-list-info li .info-detail span {
         display: block;
         color: #666;
@@ -9244,12 +9254,14 @@ a.button {
     color: #F59120; }
 
 .item-mes {
-  border: 1px solid #2379E2;
+  border: 1px solid #979797;
   background-color: #fff;
   border-radius: 5px;
-  text-align: center;
-  padding: 35px 0; }
+  text-align: center; }
   .item-mes a {
+    padding: 25px 0;
     color: #F59120;
     font-weight: bold;
-    text-decoration: none; }
+    text-decoration: none;
+    font-size: 11px;
+    display: block; }

@@ -1,0 +1,51 @@
+<ion-view view-title="Janeiro">
+    <!-- nav header button -->
+    <ion-nav-buttons side="right">
+        <a class="button button-icon button-clear ion-ios-compose-outline" ng-href="#/app/add_lancamento"></a>
+    </ion-nav-buttons>
+    <!-- nav header button -->
+
+    <ion-content>
+        <div class="list-processos">
+            <ion ng-repeat="item_lancamento in item_lancamentos">
+                <div class="item-notas item-widget">
+                    <div class="widget-header">
+                        <h4 class="titulo">{{item_lancamento.title}}</h4>
+                        <a class="link-see" href="#/app/add_lancamento">
+                            <i class="icon ion-edit"></i>
+                        </a>
+                    </div>
+                    <div class="widget-body">
+                        <ul class="widget-list-info">
+                            <li>
+                                <div class="info-title">
+                                    <p>Data</p>
+                                </div>
+                                <div class="info-detail">
+                                    <p>28/10/2015</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-title">
+                                    <p>Valor</p>
+                                </div>
+                                <div class="info-detail">
+                                    <p></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-title">
+                                    <p>Anotação</p>
+                                </div>
+                                <div class="info-detail">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit rem voluptatibus dolorem, eos, quam corporis maxime amet quod laborum. Inventore debitis quod, illo animi harum! Ullam dignissimos quos placeat ipsum!</p>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </ion>
+        </div>
+    </ion-content>
+</ion-view>

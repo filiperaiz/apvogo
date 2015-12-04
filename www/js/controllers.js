@@ -183,4 +183,36 @@ angular.module('starter.controllers', [])
         title: 'Julho',
         id: 7
     }];
+})
+
+.controller('itemFinanceiroMesCtrl', function($scope, $stateParams) {
+    $scope.item_lancamentos = [{
+        title: 'Janeiro',
+        id: 1
+    }, {
+        title: 'Fevereiro',
+        id: 2
+    }, {
+        title: 'Março',
+        id: 3
+    },{
+        title: 'Abril',
+        id: 4
+    },
+    {
+        title: 'Maio',
+        id: 5
+    },
+    {
+        title: 'Junho',
+        id: 6
+    },
+     {
+        title: 'Julho',
+        id: 7
+    }];
+
+})
+
+.controller('addLancamentoCtrl', function($scope, $stateParams) {
 });

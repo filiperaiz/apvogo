@@ -157,15 +157,25 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
     })
 
-    // .state('app.add-cliente', {
-    //     url: '/add_cliente',
-    //     views: {
-    //         'menuContent': {
-    //             templateUrl: 'templates/add-cliente.html',
-    //             controller: 'addClienteCtrl'
-    //         }
-    //     }
-    // })
+    .state('app.item-financeiro-mes', {
+        url: '/financeiro/item_financeiro_mes',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/item_financeiro_mes.html',
+                controller: 'itemFinanceiroMesCtrl'
+            }
+        }
+    })
+
+    .state('app.add-lancamento', {
+        url: '/add_lancamento',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/add-lancamento.html',
+                controller: 'addLancamentoCtrl'
+            }
+        }
+    })
 
     // .state('app.item_cliente', {
     //     url: '/clientes/:item_clienteId',

@@ -186,6 +186,23 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     }
 
     .widget-body{
+
+        .saldo-total{
+            text-align: center;
+            font-size: 38px;
+            color: #000;
+            margin:0;
+            padding: 25px 0;
+
+            &.positivo{
+                color: $balanced
+            }
+
+            &.negativo{
+                color: #ff0000;
+            }
+        }
+
         .widget-list-info{
 
             li{
@@ -198,7 +215,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
                 .info-title{
                     display: inline-block;
-                    width: 75px;
+                    width: 110px;
                     vertical-align: top;
 
                     p{
@@ -215,7 +232,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
                 .info-detail{
                     display: inline-block;
-                    width: 75.5%;
+                    width: 64.7%;
 
                     span{
                         display: block;
@@ -276,15 +293,17 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Lista de meses
 .item-mes{
-            border: 1px solid $positive;
+    border: 1px solid #979797;
     background-color: #fff;
     border-radius: 5px;
     text-align: center;
-    padding: 35px 0;
 
     a{
+        padding: 25px 0;
         color: $energized;
         font-weight: bold;
         text-decoration: none;
+        font-size: 11px;
+        display:block;
     }
 }
