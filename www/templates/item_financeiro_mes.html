@@ -7,21 +7,40 @@
 
     <ion-content>
         <div class="list-processos">
-            <ion ng-repeat="item_lancamento in item_lancamentos">
+            <ion ng-repeat="item_data_lancamento in item_data_lancamentos">
                 <div class="item-notas item-widget">
                     <div class="widget-header">
-                        <h4 class="titulo">{{item_lancamento.categoria}}</h4>
-                        <a class="link-see" href="#/app/add_lancamento">
+                        <h4 class="titulo">{{item_data_lancamento.data}}</h4>
+                        <!-- <a class="link-see" href="#/app/add_lancamento">
                             <i class="icon ion-edit"></i>
-                        </a>
+                        </a> -->
                     </div>
+
                     <div class="widget-body">
-                        <ul class="widget-list-info">
+                        <ion-item class="item-lancamento" ng-repeat="item_lancamento in item_lancamentos" type="item-text-wrap" href="#/app/clientes/{{cliente.id}}">
+                            <div class="row">
+                            <div class="col-75">
+                                <h2 class="name">{{item_lancamento.categoria}}</h2>
+                                teste
+                            </div>
+                            <div class="col-25">
+                                teste
+                            </div>
+
+                            </div>
+                       <!--    <img ng-src="img/uploads/foto-user.jpg">
+                          <p class="number"><span>CPF:</span> 1234124151512</p>
+                          <i class="icon ion-chevron-right icon-accessory"></i> -->
+                        </ion-item>
+
+                      <!--   <ul class="widget-list-info">
                             <li>
                                 <div class="info-title">
                                     <p>Valor</p>
                                 </div>
                                 <div class="info-detail">
+                                    <p>R$ 123,00</p>
+                                    <p>R$ 123,00</p>
                                     <p>R$ 123,00</p>
                                 </div>
                             </li>
@@ -58,7 +77,7 @@
                                 </div>
                             </li>
 
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
             </ion>
