@@ -1,7 +1,7 @@
 <ion-view view-title="Janeiro">
     <!-- nav header button -->
     <ion-nav-buttons side="right">
-        <a class="button button-icon button-clear ion-ios-compose-outline" ng-href="#/app/add_lancamento"></a>
+        <a class="button button-icon button-clear ion-ios-plus-outline" ng-href="#/app/add_lancamento"></a>
     </ion-nav-buttons>
     <!-- nav header button -->
 
@@ -10,27 +10,27 @@
             <ion ng-repeat="item_data_lancamento in item_data_lancamentos">
                 <div class="item-notas item-widget">
                     <div class="widget-header">
-                        <h4 class="titulo">{{item_data_lancamento.data}}</h4>
+                        <h4 class="titulo">Dia: {{item_data_lancamento.data}}</h4>
                         <!-- <a class="link-see" href="#/app/add_lancamento">
                             <i class="icon ion-edit"></i>
                         </a> -->
                     </div>
 
                     <div class="widget-body">
-                        <ion-item class="item-lancamento" ng-repeat="item_lancamento in item_lancamentos" type="item-text-wrap" href="#/app/clientes/{{cliente.id}}">
+                        <ion-item class="item-lancamento item-icon-right" ng-repeat="item_lancamento in item_lancamentos" type="item-text-wrap" href="#/app/clientes/{{cliente.id}}">
                             <div class="row">
-                            <div class="col-75">
-                                <h2 class="name">{{item_lancamento.categoria}}</h2>
-                                teste
-                            </div>
-                            <div class="col-25">
-                                teste
+                                <div class="col-67 info-lancamento-info">
+                                    <p class="descricao">{{item_lancamento.categoria}}</p>
+                                    <p class="categoria">Outros</p>
+                                </div>
+                                <div class="col-33 info-lancamento-valor">
+                                    <p class="valor receita">R$12234</p>
+                                    <p class="status">Não foi recebido</p>
+                                </div>
                             </div>
 
-                            </div>
-                       <!--    <img ng-src="img/uploads/foto-user.jpg">
-                          <p class="number"><span>CPF:</span> 1234124151512</p>
-                          <i class="icon ion-chevron-right icon-accessory"></i> -->
+
+                          <i class="icon ion-chevron-right icon-accessory"></i>
                         </ion-item>
 
                       <!--   <ul class="widget-list-info">
@@ -39,8 +39,6 @@
                                     <p>Valor</p>
                                 </div>
                                 <div class="info-detail">
-                                    <p>R$ 123,00</p>
-                                    <p>R$ 123,00</p>
                                     <p>R$ 123,00</p>
                                 </div>
                             </li>

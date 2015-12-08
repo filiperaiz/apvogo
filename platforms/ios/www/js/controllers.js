@@ -183,6 +183,14 @@ angular.module('starter.controllers', [])
 })
 
 .controller('itemFinanceiroMesCtrl', function($scope, $stateParams) {
+    $scope.item_data_lancamentos = [{
+        data: '03/01',
+        id: 1
+    }, {
+        data: '04/01',
+        id: 2
+    }];
+
     $scope.item_lancamentos = [{
         categoria: 'Transporte',
         id: 1

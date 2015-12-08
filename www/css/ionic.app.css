@@ -9326,3 +9326,26 @@ a.button {
     margin: -5px 0 0 15px; }
     .item-checkbox p span {
       display: block; }
+
+.item-lancamento .item-content {
+  padding: 5px 30px 5px 15px; }
+  .item-lancamento .item-content .row {
+    padding: 0; }
+  .item-lancamento .item-content .info-lancamento-info .descricao {
+    font-size: 14px; }
+  .item-lancamento .item-content .info-lancamento-info .categoria {
+    color: #F59120;
+    font-weight: bold;
+    font-size: 10px; }
+  .item-lancamento .item-content .info-lancamento-valor {
+    text-align: right; }
+    .item-lancamento .item-content .info-lancamento-valor .valor {
+      font-size: 15px;
+      font-weight: bold; }
+      .item-lancamento .item-content .info-lancamento-valor .valor.receita {
+        color: #3CAC5A; }
+      .item-lancamento .item-content .info-lancamento-valor .valor.despesa {
+        color: #ef473a; }
+    .item-lancamento .item-content .info-lancamento-valor .status {
+      font-weight: bold;
+      font-size: 10px; }

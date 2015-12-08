@@ -411,3 +411,53 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     }
 }
 
+// item lancamento
+
+.item-lancamento{
+    .item-content{
+        padding: 5px 30px 5px 15px;
+
+        .row{
+            padding:0;
+        }
+
+        .info-lancamento-info{
+            .descricao{
+                font-size:14px;
+            }
+
+            .categoria{
+               color: $energized;
+               font-weight: bold;
+               font-size: 10px;
+
+            }
+        }
+
+        .info-lancamento-valor{
+            text-align: right;
+
+
+            .valor{
+                font-size:15px;
+                font-weight:bold;
+
+                &.receita{
+                    color: $balanced;
+
+                }
+
+                &.despesa{
+                    color: $assertive;
+
+                }
+            }
+
+            .status{
+                font-weight: bold;
+                font-size: 10px;
+            }
+        }
+
+    }
+}
