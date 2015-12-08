@@ -2,7 +2,7 @@
 
     <!-- nav header button -->
     <ion-nav-buttons side="right">
-        <a class="button button-icon button-clear ion-ios-plus-outline" ng-href="#/app/add_cliente"></a>
+        <a class="button button-icon button-clear ion-ios-personadd" ng-href="#/app/add_cliente"></a>
     </ion-nav-buttons>
     <!-- nav header button -->
 
@@ -16,46 +16,15 @@
             Buscar
           </button>
         </div>
-        <div class="list-processos">
+        <div class="list-clientes list">
 
-            <ion ng-repeat="cliente in clientes">
-                <div class="item-cliente item-widget">
-                    <div class="widget-header">
-                        <h4 class="titulo">{{cliente.title}}</h4>
-                        <a class="link-see" href="#/app/clientes/{{cliente.id}}">
-                            <i class="icon ion-eye"></i>
-                        </a>
-                    </div>
-                    <div class="widget-body">
-                        <ul class="widget-list-info">
-                            <li>
-                                <div class="info-title">
-                                    <p>Tipo</p>
-                                </div>
-                                <div class="info-detail">
-                                    <p>Fisica</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="info-title">
-                                    <p>CPF</p>
-                                </div>
-                                <div class="info-detail">
-                                    <p>1234556789</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="info-title">
-                                    <p>Celular</p>
-                                </div>
-                                <div class="info-detail">
-                                    <p>1233456</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </ion>
+            <ion-item class="item-avatar item-icon-right item-cliente" ng-repeat="cliente in clientes" type="item-text-wrap" href="#/app/clientes/{{cliente.id}}">
+              <img ng-src="img/uploads/foto-user.jpg">
+              <h2 class="name">{{cliente.title}}</h2>
+              <p class="number"><span>CPF:</span> 1234124151512</p>
+              <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+
         </div>
     </ion-content>
 </ion-view>

@@ -42,10 +42,7 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('headerCtrl', function($scope, $ionicHistory) {
-    $scope.myGoBack = function() {
-        $ionicHistory.goBack();
-    };
+.controller('PerfilCtrl', function($scope, $stateParams) {
 })
 
 // Processos
@@ -183,4 +180,18 @@ angular.module('starter.controllers', [])
         title: 'Julho',
         id: 7
     }];
+})
+
+.controller('itemFinanceiroMesCtrl', function($scope, $stateParams) {
+    $scope.item_lancamentos = [{
+        categoria: 'Transporte',
+        id: 1
+    }, {
+        categoria: 'Outros',
+        id: 2
+    }];
+
+})
+
+.controller('addLancamentoCtrl', function($scope, $stateParams) {
 });

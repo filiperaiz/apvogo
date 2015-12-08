@@ -9129,7 +9129,8 @@ a.button {
 
 .button-config {
   position: absolute;
-  right: 15px; }
+  right: 15px;
+  top: 3px; }
   .button-config .button {
     color: #fff !important; }
 
@@ -9195,6 +9196,16 @@ a.button {
       color: #F59120; }
       .item-widget .widget-header .link-see .ion-edit {
         font-size: 18px; }
+  .item-widget .widget-body .saldo-total {
+    text-align: center;
+    font-size: 38px;
+    color: #000;
+    margin: 0;
+    padding: 25px 0; }
+    .item-widget .widget-body .saldo-total.positivo {
+      color: #3CAC5A; }
+    .item-widget .widget-body .saldo-total.negativo {
+      color: #ff0000; }
   .item-widget .widget-body .widget-list-info li {
     padding: 10px 15px;
     border-bottom: 1px solid #979797; }
@@ -9202,7 +9213,7 @@ a.button {
       border: 0; }
     .item-widget .widget-body .widget-list-info li .info-title {
       display: inline-block;
-      width: 75px;
+      width: 110px;
       vertical-align: top; }
       .item-widget .widget-body .widget-list-info li .info-title p {
         color: #666;
@@ -9211,9 +9222,16 @@ a.button {
         font-weight: bold; }
       .item-widget .widget-body .widget-list-info li .info-title .icon {
         font-size: 20px; }
+    .item-widget .widget-body .widget-list-info li .info-picture {
+      text-align: center; }
+      .item-widget .widget-body .widget-list-info li .info-picture img {
+        width: 100px;
+        height: 100px;
+        border-radius: 5px;
+        border: 1px solid #979797; }
     .item-widget .widget-body .widget-list-info li .info-detail {
       display: inline-block;
-      width: 75.5%; }
+      width: 64.7%; }
       .item-widget .widget-body .widget-list-info li .info-detail span {
         display: block;
         color: #666;
@@ -9244,12 +9262,67 @@ a.button {
     color: #F59120; }
 
 .item-mes {
-  border: 1px solid #2379E2;
+  border: 1px solid #979797;
   background-color: #fff;
   border-radius: 5px;
-  text-align: center;
-  padding: 35px 0; }
+  text-align: center; }
   .item-mes a {
+    padding: 25px 0;
     color: #F59120;
     font-weight: bold;
-    text-decoration: none; }
+    text-decoration: none;
+    font-size: 11px;
+    display: block; }
+
+.list-clientes {
+  margin: 20px 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #979797; }
+
+.item-cliente .name {
+  color: #2379E2;
+  font-weight: bold;
+  font-size: 13px; }
+
+.item-cliente .number {
+  color: #F59120;
+  font-weight: bold;
+  font-size: 11px; }
+  .item-cliente .number span {
+    color: #666666; }
+
+.tipo-radio {
+  margin: 20px 10px; }
+  .tipo-radio .row {
+    padding: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #979797; }
+  .tipo-radio .item-radio .item-content {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px; }
+  .tipo-radio .item-radio input:checked + .radio-content.receita .item-content {
+    background: #3CAC5A;
+    color: #fff; }
+  .tipo-radio .item-radio input:checked + .radio-content.despesa .item-content {
+    background: #ef473a;
+    color: #fff; }
+
+.item-checkbox {
+  padding-left: 60px;
+  min-height: 55px; }
+  .item-checkbox input {
+    float: left; }
+  .item-checkbox label > input:checked + p {
+    color: #3CAC5A; }
+  .item-checkbox p {
+    font-size: 14px;
+    color: #ef473a;
+    vertical-align: middle;
+    float: left;
+    margin: -5px 0 0 15px; }
+    .item-checkbox p span {
+      display: block; }

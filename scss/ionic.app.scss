@@ -26,6 +26,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 }
 
 
+
 .scroll-content{
     background-color: #EEEEEE;
 }
@@ -55,6 +56,8 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     }
 }
 
+
+
 .info-user{
     margin-left: 10px;
     .name{
@@ -74,6 +77,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 .button-config{
     position: absolute;
     right: 15px;
+    top: 3px;
 
     .button{
         color: #fff !important;
@@ -230,6 +234,17 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
                     }
                 }
 
+                .info-picture{
+                    text-align: center;
+
+                    img{
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 5px;
+                        border: 1px solid #979797;
+                    }
+                }
+
                 .info-detail{
                     display: inline-block;
                     width: 64.7%;
@@ -307,3 +322,89 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
         display:block;
     }
 }
+
+
+// item-clientes
+
+.list-clientes{
+    margin: 20px 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #979797;
+}
+
+.item-cliente{
+    .name{
+        color: $positive;
+        font-weight: bold;
+        font-size: 13px;
+    }
+
+    .number{
+        color: $energized;
+        font-weight: bold;
+        font-size: 11px;
+
+        span{
+            color: $stable;
+        }
+    }
+}
+
+//  tipo-radio
+.tipo-radio{
+    margin:20px 10px;
+
+    .row{
+        padding: 0;
+        border-radius: 5px;
+        overflow: hidden;
+        border: 1px solid #979797;
+    }
+
+    .item-radio .item-content{
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 12px;
+
+    }
+
+    .item-radio input:checked + .radio-content.receita .item-content {
+        background: $balanced;
+        color: #fff;
+    }
+
+     .item-radio input:checked + .radio-content.despesa .item-content {
+        background: $assertive;
+        color: #fff;
+    }
+}
+
+
+.item-checkbox {
+    padding-left: 60px;
+    min-height: 55px;
+
+    input{
+        float: left;
+    }
+
+    label > input:checked + p {
+        color: $balanced;
+    }
+
+    p{
+        font-size: 14px;
+        color: $assertive;
+
+            vertical-align: middle;
+            float: left;
+            margin: -5px 0 0 15px;
+
+            span{
+                display: block;
+            }
+    }
+}
+

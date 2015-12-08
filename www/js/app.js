@@ -189,6 +189,21 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     // })
 
 
+    // Perfil
+
+        .state('app.perfil', {
+            url: '/perfil',
+            views: {
+                'menuContent': {
+                    templateUrl: 'templates/perfil.html',
+                    controller: 'PerfilCtrl'
+                }
+            }
+        })
+
+
+
+
 
 
 
