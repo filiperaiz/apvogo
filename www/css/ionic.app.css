@@ -9349,3 +9349,48 @@ a.button {
     .item-lancamento .item-content .info-lancamento-valor .status {
       font-weight: bold;
       font-size: 10px; }
+
+.slide-login .scroll, .slider {
+  height: 100%; }
+
+.item-slide {
+  height: 100%; }
+
+.item-slide img {
+  width: 100%; }
+
+.bg-app {
+  background-color: #ddd;
+  background-image: url(../img/bg-login.jpg);
+  padding: 0 40px;
+  background-size: cover; }
+
+.bg-logo {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px; }
+  .bg-logo img {
+    width: 150px; }
+
+.box-form-app {
+  position: absolute;
+  bottom: 15%;
+  left: 0;
+  right: 0;
+  margin: 0 40px; }
+
+.form-login .list-inset {
+  margin: 20px 0; }
+
+.forgot {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  right: 0; }
+
+.forgot .button {
+  font-size: 11px;
+  color: #fff !important;
+  font-weight: bold; }

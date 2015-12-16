@@ -42,6 +42,17 @@ angular.module('starter.controllers', [])
 })
 
 
+.controller('loginCtrl', function($scope, $ionicModal) {
+  $ionicModal.fromTemplateUrl('templates/modal-esquecisenha.html', {
+      scope: $scope
+  }).then(function(modal) {
+      $scope.modal = modal;
+  });
+})
+
+.controller('cadastrarCtrl', function($scope, $stateParams) {
+})
+
 .controller('PerfilCtrl', function($scope, $stateParams) {
 })
 
