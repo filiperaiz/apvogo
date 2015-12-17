@@ -14,7 +14,6 @@
 
     <ion-side-menu side="left">
 
-        <ion-content class="bg-menu">
         <ion-header-bar class="bar-stable">
             <div class="pic-user">
                 <img src="img/uploads/foto-user.jpg" alt="">
@@ -29,10 +28,8 @@
                 <a class="button button-clear icon ion-gear-a" nav-clear menu-close  href="#/app/perfil" ></a>
             </div>
         </ion-header-bar>
+        <ion-content class="bg-menu">
             <ion-list class="menu-list">
-                <ion-item item-type="item-icon-left" nav-clear menu-close href="#/app/perfil">
-                      <i class="icon ion-gear-a"></i>Perfil
-                </ion-item>
 
                 <ion-item item-type="item-icon-left" nav-clear menu-close href="#/app/processos">
                       <i class="icon ion-clipboard"></i>Processos
@@ -42,16 +39,15 @@
                       <i class="icon ion-person-stalker"></i>Clientes
                 </ion-item>
 
-
                 <ion-item item-type="item-icon-left" nav-clear menu-close href="#/app/financeiro">
                       <i class="icon ion-social-usd"></i>Financeiro
                 </ion-item>
 
-              <!--   <ion-item item-type="item-icon-left" nav-clear menu-close href="#/app/playlist">
-                      <i class="icon ion-calendar"></i>Prazos
-                </ion-item> -->
-
                 <ion-item item-type="item-icon-left" nav-clear menu-close href="#/app/playlist">
+                      <i class="icon ion-calendar"></i>Agendamento
+                </ion-item>
+
+                <ion-item item-type="item-icon-left" nav-clear menu-close href="#/login">
                       <i class="icon ion-power"></i>Sair
                 </ion-item>
             </ion-list>

@@ -90,7 +90,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
     .menu-list{
         .list{
-            padding: 10px;
+            padding: 0;
 
             .item{
                 background-color: transparent;
@@ -99,12 +99,14 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
                 .item-content{
                     background-color: transparent;
                     color: #fff;
-                    font-size: 14px;
+                    font-size: 16px;
                     font-weight: bold;
+                    padding: 25px 49px 25px 16px;
+                    border-bottom: 1px solid #636161;
 
                     .icon{
                         margin-right: 10px;
-                        font-size: 18px;
+                        font-size: 20px;
                     }
                 }
             }
@@ -286,6 +288,18 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
             height:100px;
         }
     }
+
+    .item-toggle{
+        font-size: 11px;
+        font-weight: bold;
+        color: #666;
+    }
+
+    .input-label{
+        font-size: 11px;
+        font-weight: bold;
+        color: #666;
+    }
 }
 
 
@@ -389,6 +403,21 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     padding-left: 60px;
     min-height: 55px;
 
+
+    &.chk-ok{
+        min-height: 70px;
+        padding: 0 !important;
+
+        .checkbox{
+            padding:0;
+
+            input{
+                visibility:hidden;
+                display:none;
+            }
+        }
+    }
+
     input{
         float: left;
     }
@@ -408,6 +437,29 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
             span{
                 display: block;
             }
+
+        &.valor{
+            font-size:20px;
+            margin-left:9px;
+
+            .status{
+                font-size: 13px;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+        }
+
+        .ok{
+            position: absolute;
+            top: -15px;
+            right: -8px;
+            font-size: 50px;
+            border-left: 1px solid #D6D4D4;
+            padding-left: 20px;
+            min-height: 70px;
+            background: #F5F5F5;
+            padding-right: 20px;
+        }
     }
 }
 
@@ -481,7 +533,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 .bg-app{
     background-color: #ddd;
-    background-image: url(../img/bg-login.jpg);
+    background-image: url(../img/bg-login.png);
     padding: 0 40px;
     background-size: cover;
 }

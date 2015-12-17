@@ -9137,18 +9137,20 @@ a.button {
 .bg-menu {
   background-color: #585859; }
   .bg-menu .menu-list .list {
-    padding: 10px; }
+    padding: 0; }
     .bg-menu .menu-list .list .item {
       background-color: transparent;
       border: 0; }
       .bg-menu .menu-list .list .item .item-content {
         background-color: transparent;
         color: #fff;
-        font-size: 14px;
-        font-weight: bold; }
+        font-size: 16px;
+        font-weight: bold;
+        padding: 25px 49px 25px 16px;
+        border-bottom: 1px solid #636161; }
         .bg-menu .menu-list .list .item .item-content .icon {
           margin-right: 10px;
-          font-size: 18px; }
+          font-size: 20px; }
 
 .button-tabs {
   margin: 20px 10px; }
@@ -9251,6 +9253,14 @@ a.button {
     color: #666; }
   .item-widget .item-stacked-label textarea {
     height: 100px; }
+  .item-widget .item-toggle {
+    font-size: 11px;
+    font-weight: bold;
+    color: #666; }
+  .item-widget .input-label {
+    font-size: 11px;
+    font-weight: bold;
+    color: #666; }
 
 .clientes-processo .item {
   font-size: 14px;
@@ -9314,6 +9324,14 @@ a.button {
 .item-checkbox {
   padding-left: 60px;
   min-height: 55px; }
+  .item-checkbox.chk-ok {
+    min-height: 70px;
+    padding: 0 !important; }
+    .item-checkbox.chk-ok .checkbox {
+      padding: 0; }
+      .item-checkbox.chk-ok .checkbox input {
+        visibility: hidden;
+        display: none; }
   .item-checkbox input {
     float: left; }
   .item-checkbox label > input:checked + p {
@@ -9326,6 +9344,23 @@ a.button {
     margin: -5px 0 0 15px; }
     .item-checkbox p span {
       display: block; }
+    .item-checkbox p.valor {
+      font-size: 20px;
+      margin-left: 9px; }
+      .item-checkbox p.valor .status {
+        font-size: 13px;
+        font-weight: bold;
+        margin-top: 5px; }
+    .item-checkbox p .ok {
+      position: absolute;
+      top: -15px;
+      right: -8px;
+      font-size: 50px;
+      border-left: 1px solid #D6D4D4;
+      padding-left: 20px;
+      min-height: 70px;
+      background: #F5F5F5;
+      padding-right: 20px; }
 
 .item-lancamento .item-content {
   padding: 5px 30px 5px 15px; }
@@ -9361,7 +9396,7 @@ a.button {
 
 .bg-app {
   background-color: #ddd;
-  background-image: url(../img/bg-login.jpg);
+  background-image: url(../img/bg-login.png);
   padding: 0 40px;
   background-size: cover; }
 
@@ -9369,8 +9404,6 @@ a.button {
   text-align: center;
   padding: 20px;
   margin-top: 40px; }
-  .bg-logo img {
-    width: 150px; }
 
 .box-form-app {
   position: absolute;

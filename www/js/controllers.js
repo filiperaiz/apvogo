@@ -212,5 +212,9 @@ angular.module('starter.controllers', [])
 
 })
 
+.controller('itemFinanceiroDiaCtrl', function($scope, $stateParams) {
+
+})
+
 .controller('addLancamentoCtrl', function($scope, $stateParams) {
 });

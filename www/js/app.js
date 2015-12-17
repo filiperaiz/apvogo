@@ -180,6 +180,18 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
     })
 
+    .state('app.item-financeiro-dia', {
+        url: '/item_financeiro_mes/:item_financeiro_diaId',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/item_financeiro_dia.html',
+                controller: 'itemFinanceiroDiaCtrl',
+
+            }
+        }
+    })
+
+
     .state('app.add-lancamento', {
         url: '/add_lancamento',
         views: {
@@ -190,16 +202,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
     })
 
-    // .state('app.item_cliente', {
-    //     url: '/clientes/:item_clienteId',
-    //     views: {
-    //         'menuContent': {
-    //             templateUrl: 'templates/item_cliente.html',
-    //             controller: 'itemClienteCtrl',
-
-    //         }
-    //     }
-    // })
 
 
     // Perfil
