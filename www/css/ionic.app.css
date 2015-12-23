@@ -9350,7 +9350,7 @@ a.button {
       .item-checkbox p.valor .status {
         font-size: 13px;
         font-weight: bold;
-        margin-top: 5px; }
+        qmargin-top: 5px; }
     .item-checkbox p .ok {
       position: absolute;
       top: -15px;
@@ -9384,6 +9384,52 @@ a.button {
     .item-lancamento .item-content .info-lancamento-valor .status {
       font-weight: bold;
       font-size: 10px; }
+
+.app-calendar {
+  border-bottom: 2px solid #2379E2;
+  min-height: 260px;
+  background: #fff;
+  z-index: 100;
+  position: absolute;
+  width: 100%; }
+
+.box-agendamento {
+  position: absolute;
+  top: 260px;
+  overflow: hidden;
+  bottom: 0;
+  right: 0;
+  left: 0; }
+  .box-agendamento .list-agendamento {
+    position: absolute;
+    top: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    bottom: 0;
+    right: 0;
+    left: 0; }
+
+.item-agendamento .item-content {
+  padding: 5px 30px 5px 15px; }
+  .item-agendamento .item-content .row {
+    padding: 0; }
+  .item-agendamento .item-content .info-agendamento-info {
+    border-right: 1px solid #DDDDDD;
+    position: absolute;
+    width: 44px; }
+    .item-agendamento .item-content .info-agendamento-info .header {
+      font-size: 12px; }
+    .item-agendamento .item-content .info-agendamento-info .hora {
+      color: #F59120;
+      font-weight: bold;
+      font-size: 12px; }
+  .item-agendamento .item-content .info-agendamento-valor {
+    padding-left: 57px; }
+    .item-agendamento .item-content .info-agendamento-valor .titulo {
+      font-size: 12px;
+      font-weight: bold; }
+    .item-agendamento .item-content .info-agendamento-valor .descricao {
+      font-size: 11px; }
 
 .slide-login .scroll, .slider {
   height: 100%; }

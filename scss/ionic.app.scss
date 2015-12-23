@@ -445,7 +445,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
             .status{
                 font-size: 13px;
                 font-weight: bold;
-                margin-top: 5px;
+                qmargin-top: 5px;
             }
         }
 
@@ -508,6 +508,78 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
             .status{
                 font-weight: bold;
                 font-size: 10px;
+            }
+        }
+
+    }
+}
+
+.app-calendar{
+    border-bottom: 2px solid #2379E2;
+    min-height: 260px;
+    background: #fff;
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+}
+
+
+.box-agendamento{
+    position: absolute;
+    top: 260px;
+    overflow: hidden;
+    bottom: 0;
+    right:0;
+    left:0;
+
+    .list-agendamento{
+        position: absolute;
+
+        top: 0;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        bottom: 0;
+        right:0;
+        left:0;
+    }
+
+}
+
+.item-agendamento{
+    .item-content{
+        padding: 5px 30px 5px 15px;
+
+        .row{
+            padding:0;
+        }
+
+        .info-agendamento-info{
+            border-right: 1px solid #DDDDDD;
+            position: absolute;
+            width:44px;
+            .header{
+                font-size:12px;
+            }
+
+            .hora{
+               color: $energized;
+               font-weight: bold;
+               font-size: 12px;
+
+            }
+        }
+
+        .info-agendamento-valor{
+            padding-left:57px;
+
+            .titulo{
+                font-size:12px;
+                font-weight:bold;
+
+            }
+
+            .descricao{
+                font-size: 11px;
             }
         }
 

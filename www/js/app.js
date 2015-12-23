@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ngCordova'])
 
 
 
@@ -25,10 +25,10 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
+
+// Base
     $stateProvider
-
-
-    .state('login', {
+        .state('login', {
         url: '/login',
         templateUrl: 'templates/login.html',
         controller: 'loginCtrl'
@@ -121,11 +121,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
     })
 
-
-
-
 // Clientes
-
     .state('app.clientes', {
         url: '/clientes',
         views: {
@@ -157,9 +153,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
     })
 
-
 // Financeiro
-
     .state('app.financeiro', {
         url: '/financeiro',
         views: {
@@ -202,56 +196,58 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
     })
 
-
-
-    // Perfil
-
-        .state('app.perfil', {
-            url: '/perfil',
-            views: {
-                'menuContent': {
-                    templateUrl: 'templates/perfil.html',
-                    controller: 'PerfilCtrl'
-                }
-            }
-        })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    .state('app.search', {
-        url: '/search',
+// Perfil
+    .state('app.perfil', {
+        url: '/perfil',
         views: {
             'menuContent': {
-                templateUrl: 'templates/search.html'
+                templateUrl: 'templates/perfil.html',
+                controller: 'PerfilCtrl'
             }
         }
     })
 
-    .state('app.browse', {
-        url: '/browse',
+// Agendamento
+    .state('app.agendamento', {
+        url: '/agendamento',
         views: {
             'menuContent': {
-                templateUrl: 'templates/browse.html'
+                templateUrl: 'templates/agendamento.html',
+                controller: 'AgendamentoCtrl'
             }
         }
-    });
+    })
+
+    // .state('app.agendamento', {
+    //     url: '/processos/:item_agendamentoId/agendamento',
+    //     views: {
+    //         'menuContent': {
+    //             templateUrl: 'templates/agendamento.html',
+    //             controller: 'AgendamentoCtrl'
+    //         }
+    //     }
+    // })
+
+
+
+    // .state('app.add-agendamento', {
+    //     url: '/add_agendamento',
+    //     views: {
+    //         'menuContent': {
+    //             templateUrl: 'templates/add-agendamento.html',
+    //             controller: 'addAgendamentoCtrl'
+    //         }
+    //     }
+    // })
+
+
+
 
 
 
 
 
     // if none of the above states are matched, use this as the fallback
-    // $urlRouterProvider.otherwise('/app/processos');
+    // $urlRouterProvider.otherwise('/app/agendamento');
     $urlRouterProvider.otherwise('/login');
 });

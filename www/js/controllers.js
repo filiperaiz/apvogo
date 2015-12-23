@@ -2,59 +2,20 @@ angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
-    // With the new view caching in Ionic, Controllers are only called
-    // when they are recreated or on app start, instead of every page change.
-    // To listen for when this page is active (for example, to refresh data),
-    // listen for the $ionicView.enter event:
-    //$scope.$on('$ionicView.enter', function(e) {
-    //});
-
-    // Form data for the login modal
-    $scope.loginData = {};
-
-    // Create the login modal that we will use later
-    $ionicModal.fromTemplateUrl('templates/login.html', {
-        scope: $scope
-    }).then(function(modal) {
-        $scope.modal = modal;
-    });
-
-    // Triggered in the login modal to close it
-    $scope.closeLogin = function() {
-        $scope.modal.hide();
-    };
-
-    // Open the login modal
-    $scope.login = function() {
-        $scope.modal.show();
-    };
-
-    // Perform the login action when the user submits the login form
-    $scope.doLogin = function() {
-        console.log('Doing login', $scope.loginData);
-
-        // Simulate a login delay. Remove this and replace with your login
-        // code if using a login system
-        $timeout(function() {
-            $scope.closeLogin();
-        }, 1000);
-    };
 })
 
 
 .controller('loginCtrl', function($scope, $ionicModal) {
-  $ionicModal.fromTemplateUrl('templates/modal-esquecisenha.html', {
-      scope: $scope
-  }).then(function(modal) {
-      $scope.modal = modal;
-  });
+    $ionicModal.fromTemplateUrl('templates/modal-esquecisenha.html', {
+        scope: $scope
+    }).then(function(modal) {
+        $scope.modal = modal;
+    });
 })
 
-.controller('cadastrarCtrl', function($scope, $stateParams) {
-})
+.controller('cadastrarCtrl', function($scope, $stateParams) {})
 
-.controller('PerfilCtrl', function($scope, $stateParams) {
-})
+.controller('PerfilCtrl', function($scope, $stateParams) {})
 
 // Processos
 .controller('ProcessosCtrl', function($scope, $stateParams, $ionicModal, $http) {
@@ -86,8 +47,7 @@ angular.module('starter.controllers', [])
     };
 })
 
-.controller('addProcessoCtrl', function($scope, $stateParams) {
-})
+.controller('addProcessoCtrl', function($scope, $stateParams) {})
 
 .controller('itemProcessoCtrl', function($scope, $ionicModal, $stateParams) {
     $scope.doRefresh = function() {
@@ -111,7 +71,6 @@ angular.module('starter.controllers', [])
 })
 
 
-
 // Notas
 .controller('NotesCtrl', function($scope, $stateParams) {
     $scope.notas = [{
@@ -129,15 +88,15 @@ angular.module('starter.controllers', [])
     }];
 })
 
-.controller('addNotaCtrl', function($scope, $stateParams) {})
+.controller('addNotaCtrl', function($scope, $stateParams) {
 
+})
 
 
 // Honorarios
 .controller('HonorariosCtrl', function($scope, $stateParams) {})
 
 .controller('addHonorarioCtrl', function($scope, $stateParams) {})
-
 
 
 // Clientes
@@ -157,11 +116,9 @@ angular.module('starter.controllers', [])
     }];
 })
 
-.controller('addClienteCtrl', function($scope, $stateParams) {
-})
+.controller('addClienteCtrl', function($scope, $stateParams) {})
 
-.controller('itemClienteCtrl', function($scope, $stateParams) {
-})
+.controller('itemClienteCtrl', function($scope, $stateParams) {})
 
 
 // Financeiro
@@ -175,19 +132,16 @@ angular.module('starter.controllers', [])
     }, {
         title: 'Março',
         id: 3
-    },{
+    }, {
         title: 'Abril',
         id: 4
-    },
-    {
+    }, {
         title: 'Maio',
         id: 5
-    },
-    {
+    }, {
         title: 'Junho',
         id: 6
-    },
-     {
+    }, {
         title: 'Julho',
         id: 7
     }];
@@ -217,4 +171,62 @@ angular.module('starter.controllers', [])
 })
 
 .controller('addLancamentoCtrl', function($scope, $stateParams) {
+
+})
+
+
+
+
+
+// Agendamentos
+
+
+
+
+
+
+
+
+
+.controller('addAgendamentoCtrl', function($scope, $stateParams) {})
+
+
+.controller('AgendamentoCtrl', function($scope) {
+
+    $("#myCalendar-1").ionCalendar({
+        lang: "pt-br",                     // language
+        format: "DD.MM.YYYY",           // date format
+    });
+
+    $scope.agendamentos = [{
+        title: 'nota 1',
+        id: 1
+    }, {
+        title: 'nota 2',
+        id: 2
+    }, {
+        title: 'nota 3',
+        id: 3
+    }, {
+        title: 'nota 4',
+        id: 4
+    }, {
+        title: 'nota 5',
+        id: 5
+    }, {
+        title: 'nota 3',
+        id: 6
+    }, {
+        title: 'nota 4',
+        id: 7
+    }, {
+        title: 'nota 5',
+        id: 8
+    }, {
+        title: 'nota 6',
+        id: 9
+    }];
+
+
+
 });
