@@ -20,12 +20,12 @@
                         <ion-item class="item-lancamento item-icon-right" ng-repeat="item_lancamento in item_lancamentos" type="item-text-wrap" href="#/app/item_financeiro_mes/{{item_financeiro_dia.id}}">
                             <div class="row">
                                 <div class="col-67 info-lancamento-info">
-                                    <p class="descricao">{{item_lancamento.categoria}}</p>
-                                    <p class="categoria">Outros</p>
+                                    <p class="descricao">{{item_lancamento.titulo}}</p>
+                                    <p class="categoria">{{item_lancamento.categoria}}</p>
                                 </div>
                                 <div class="col-33 info-lancamento-valor">
-                                    <p class="valor receita">R$12234</p>
-                                    <p class="status">Não foi recebido</p>
+                                    <p class="valor receita">R$ {{item_lancamento.valor}}</p>
+                                    <p class="status">{{item_lancamento.status}}</p>
                                 </div>
                             </div>
 
@@ -33,49 +33,6 @@
                           <i class="icon ion-chevron-right icon-accessory"></i>
                         </ion-item>
 
-                      <!--   <ul class="widget-list-info">
-                            <li>
-                                <div class="info-title">
-                                    <p>Valor</p>
-                                </div>
-                                <div class="info-detail">
-                                    <p>R$ 123,00</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="info-title">
-                                    <p>Data</p>
-                                </div>
-                                <div class="info-detail">
-                                    <p>28/10/2015</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="info-title">
-                                    <p>Tipo</p>
-                                </div>
-                                <div class="info-detail">
-                                    <p>Receita</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="info-title">
-                                    <p>Status</p>
-                                </div>
-                                <div class="info-detail">
-                                    <p>Pago</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="info-title">
-                                    <p>Anotação</p>
-                                </div>
-                                <div class="info-detail">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                                </div>
-                            </li>
-
-                        </ul> -->
                     </div>
                 </div>
             </ion>

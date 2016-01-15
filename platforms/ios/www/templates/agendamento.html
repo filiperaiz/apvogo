@@ -29,11 +29,11 @@
                 <ion-item class="item-agendamento item-icon-right" ng-repeat="agendamento in agendamentos" type="item-text-wrap" href="#/app/item_financeiro_mes/{{item_financeiro_dia.id}}">
                     <div class="info-agendamento-info">
                         <p class="header">Hora</p>
-                        <p class="hora">15:00</p>
+                        <p class="hora">{{agendamento.hour}}</p>
                     </div>
                     <div class="info-agendamento-valor">
-                        <p class="titulo">Numero do tal processo</p>
-                        <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p class="titulo">{{agendamento.title}}</p>
+                        <p class="descricao">{{agendamento.descricao}}</p>
                     </div>
 
 

@@ -9387,11 +9387,15 @@ a.button {
 
 .app-calendar {
   border-bottom: 2px solid #2379E2;
-  min-height: 200px; }
+  min-height: 260px;
+  background: #fff;
+  z-index: 100;
+  position: absolute;
+  width: 100%; }
 
 .box-agendamento {
   position: absolute;
-  top: 228px;
+  top: 260px;
   overflow: hidden;
   bottom: 0;
   right: 0;

@@ -20,19 +20,30 @@ angular.module('starter.controllers', [])
 // Processos
 .controller('ProcessosCtrl', function($scope, $stateParams, $ionicModal, $http) {
     $scope.processos = [{
-        title: 'TJSP Completo 000109…',
+        title: 'TJSP  000109…',
+        numero: '(42432.341.243212.001423423092),0001423402675492.068.01.2012.001092',
+        autor: 'Rodrigues Feitosa',
+        data: '12/01/2016',
         id: 1
     }, {
-        title: 'TJSP Completo 000110…',
-        id: 2
+        title: 'TJRJ  000109…',
+        numero: '(054358.05.2012.654745),0001340925456.068.01.2012.001092',
+        autor: ' Maria dos Santos Batista',
+        data: '10/12/2015',
+        id: 1
     }, {
-        title: 'TJSP Completo 000111',
-        id: 3
+        title: 'TJPI  000109…',
+        numero: '(068.01.2012.001092),0001092.068.01.2012.001092',
+        autor: 'Eduardo Brito',
+        data: '20/12/2015',
+        id: 1
     }, {
-        title: 'TJSP Completo 000112',
-        id: 4
+        title: 'TJSP  000109…',
+        numero: '(068.01.2012.001092),0001092.068.01.2012.001092',
+        autor: 'Pedro de Oliveira Bastos',
+        data: '28/09/2015',
+        id: 1
     }];
-
 
 
     $scope.doRefresh = function() {
@@ -157,11 +168,23 @@ angular.module('starter.controllers', [])
     }];
 
     $scope.item_lancamentos = [{
+        titulo: 'Gastos com gasolina',
         categoria: 'Transporte',
+        valor: '150,00',
+        status: 'pago',
         id: 1
     }, {
+        titulo: 'Outros',
         categoria: 'Outros',
+        valor: '677,00',
+        status: 'pago',
         id: 2
+    },{
+       titulo: 'Serviços gerais',
+       categoria: 'Escritorio',
+       valor: '50,00',
+       status: 'Não foi pago',
+       id: 3
     }];
 
 })
@@ -194,39 +217,37 @@ angular.module('starter.controllers', [])
 .controller('AgendamentoCtrl', function($scope) {
 
     $("#myCalendar-1").ionCalendar({
-        lang: "pt-br",                     // language
-        format: "DD.MM.YYYY",           // date format
+        lang: "pt-br", // language
+        format: "DD.MM.YYYY", // date format
     });
 
     $scope.agendamentos = [{
-        title: 'nota 1',
-        id: 1
+        id: 1,
+        hour: '08:00',
+        title: 'Audiência Preliminar na 1ª Vara',
+        descricao: '1ª Vara do Trabalho de São Paulo - 2ª Região',
     }, {
-        title: 'nota 2',
-        id: 2
+        id: 2,
+        hour: '09:00h',
+        title: 'Fazer carga do Processo nº 0001.000-0',
+        descricao: '2ª Vara do Trabalho de São Paulo - 2ª Região',
+    },
+    {
+        id: 3,
+        hour: '11:30h',
+        title: 'Reunião do Conselho na Seccional',
+        descricao: 'OAB de São Paulo',
+    },
+    {
+        id: 4,
+        hour: '14:00h',
+        title: 'Audiência de Instrução',
+        descricao: 'no JEC da FAAP',
     }, {
-        title: 'nota 3',
-        id: 3
-    }, {
-        title: 'nota 4',
-        id: 4
-    }, {
-        title: 'nota 5',
-        id: 5
-    }, {
-        title: 'nota 3',
-        id: 6
-    }, {
-        title: 'nota 4',
-        id: 7
-    }, {
-        title: 'nota 5',
-        id: 8
-    }, {
-        title: 'nota 6',
-        id: 9
+        id: 5,
+        hour: '17:30h',
+        title: 'Reunião Administrativa do Escritório',
+        descricao: 'Planejanmento da próxima semana',
     }];
-
-
 
 });
