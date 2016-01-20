@@ -1,0 +1,70 @@
+<ion-view view-title="Processos">
+
+    <!-- nav header button -->
+    <ion-nav-buttons side="right">
+        <a class="button button-icon button-clear ion-ios-plus-outline" ng-href="#/app/add_processo"></a>
+    </ion-nav-buttons>
+    <!-- nav header button -->
+
+    <ion-content>
+
+        <!-- Refresh  -->
+        <ion-refresher
+          pulling-text="Atualizando..."
+          on-refresh="doRefresh()">
+        </ion-refresher>
+
+
+        <div class="bar-search item-input-inset">
+          <label class="item-input-wrapper">
+            <i class="icon ion-ios-search placeholder-icon"></i>
+            <input type="search" placeholder="Pesquisar processos">
+          </label>
+          <button class="button button-clear">
+            Buscar
+          </button>
+        </div>
+
+        <div class="list-processos">
+            <ion ng-repeat="processo in processos">
+                <div class="item-processo item-widget">
+                    <div class="widget-header">
+                        <h4 class="titulo">{{processo.title}}</h4>
+                        <a class="link-see" href="#/app/processos/{{processo.id}}">
+                            <i class="icon ion-eye"></i>
+                        </a>
+                    </div>
+                    <div class="widget-body">
+                        <ul class="widget-list-info">
+                            <li>
+                                <div class="info-title">
+                                    <p>Processo</p>
+                                </div>
+                                <div class="info-detail">
+                                    <p>{{processo.numero}}</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-title">
+                                    <p>Autor</p>
+                                </div>
+                                <div class="info-detail">
+                                    <p>{{processo.autor}}</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-title">
+                                    <p>Atualizado</p>
+                                </div>
+                                <div class="info-detail">
+                                    <p>{{processo.data}}</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </ion>
+        </div>
+    </ion-content>
+</ion-view>
+
