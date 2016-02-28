@@ -10,7 +10,7 @@
         <div class="bar-search item-input-inset">
           <label class="item-input-wrapper">
             <i class="icon ion-ios-search placeholder-icon"></i>
-            <input type="search" placeholder="Pesquisar clientes">
+            <input type="search" placeholder="Pesquisar clientes" ng-model="q">
           </label>
           <button class="button button-clear">
             Buscar
@@ -18,11 +18,15 @@
         </div>
         <div class="list-clientes list">
 
-            <ion-item class="item-avatar item-icon-right item-cliente" ng-repeat="cliente in clientes" type="item-text-wrap" href="#/app/clientes/{{cliente.id}}">
-              <img ng-src="img/uploads/foto-user.jpg">
-              <h2 class="name">{{cliente.title}}</h2>
-              <p class="number"><span>CPF:</span> 1234124151512</p>
-              <i class="icon ion-chevron-right icon-accessory"></i>
+            <ion-item class="item-avatar item-icon-right item-cliente"
+                ng-repeat="cliente in clientes|filter:q"
+                ng-href="#/app/clientes/{{cliente.id}}"
+                type="item-text-wrap">
+
+                <img ng-src="{{ cliente.picture }}">
+                <h2 class="name">{{ cliente.name }}</h2>
+                <p class="number"><span>CPF:</span> {{ cliente.cpf }}</p>
+                <i class="icon ion-chevron-right icon-accessory"></i>
             </ion-item>
 
         </div>

@@ -2,20 +2,28 @@
 
     <!-- nav header button -->
     <ion-nav-buttons side="right">
-        <a class="button button-icon button-clear ion-ios-compose-outline" ng-href="#/app/add_cliente"></a>
+        <a class="button button-icon button-clear ion-ios-compose-outline" ng-href="#/app/clientes/editar/{{ cliente.id }}"></a>
     </ion-nav-buttons>
     <!-- nav header button -->
     <ion-content has-header="true">
         <section class="box-cliente">
             <div class="box-detail-cliente item-widget">
                 <div class="widget-header">
-                    <h4 class="titulo">Filipe Raiz</h4>
+                    <h4 class="titulo">{{ cliente.name }}</h4>
                 </div>
                 <div class="widget-body">
                     <ul class="widget-list-info">
                         <li>
                             <div class="info-picture">
-                                <p><img ng-src="img/uploads/foto-user.jpg"></p>
+                                <p><img ng-src="{{ cliente.picture }}"></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info-title">
+                                <p>Sexo</p>
+                            </div>
+                            <div class="info-detail">
+                                <p>{{ cliente.sex_display }}</p>
                             </div>
                         </li>
                         <li>
@@ -23,7 +31,7 @@
                                 <p>Tipo</p>
                             </div>
                             <div class="info-detail">
-                                <p>Fisica</p>
+                                <p>{{ cliente.type_display }}</p>
                             </div>
                         </li>
                         <li>
@@ -31,7 +39,7 @@
                                 <p>Cpf</p>
                             </div>
                             <div class="info-detail">
-                                <p>1231231242421</p>
+                                <p>{{ cliente.cpf }}</p>
                             </div>
                         </li>
                         <li>
@@ -39,15 +47,15 @@
                                 <p>Email</p>
                             </div>
                             <div class="info-detail">
-                                <p>filiperaiz@gmail.com</p>
+                                <p>{{ cliente.email }}</p>
                             </div>
                         </li>
                         <li>
                             <div class="info-title">
-                                <p>Aniversario</p>
+                                <p>Data de nascimento</p>
                             </div>
                             <div class="info-detail">
-                                <p>17/12/1989</p>
+                                <p>{{ cliente.birthdate|date:'dd/MM/y' }}</p>
                             </div>
                         </li>
                         <li>
@@ -55,23 +63,23 @@
                                 <p>Tel. Celular</p>
                             </div>
                             <div class="info-detail">
-                                <p>44421412412</p>
+                                <p>{{ cliente.cellphone }}</p>
                             </div>
                         </li>
-                        <li>
+                        <li ng-hide="!cliente.residencial_phone">
                             <div class="info-title">
                                 <p>Tel. Res</p>
                             </div>
                             <div class="info-detail">
-                                <p>13124241412</p>
+                                <p>{{ cliente.residencial_phone }}</p>
                             </div>
                         </li>
-                        <li>
+                        <li ng-hide="!cliente.comercial_phone">
                             <div class="info-title">
                                 <p>Tel. Trabalho</p>
                             </div>
                             <div class="info-detail">
-                                <p>123134124124</p>
+                                <p>{{ cliente.comercial_phone }}</p>
                             </div>
                         </li>
                         <li>
@@ -79,21 +87,13 @@
                                 <p>Endereço</p>
                             </div>
                             <div class="info-detail">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae debitis incidunt nihil nesciunt delectus aperiam cumque</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="info-title">
-                                <p>Complemento</p>
-                            </div>
-                            <div class="info-detail">
-                                <p>Lorem ipsum dolor sit amet</p>
+                                <p>{{ cliente.address }}</p>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
-
+<!--
             <div class="box-detail-processo item-widget">
                 <div class="widget-header">
                     <h4 class="titulo">Processos envolvido</h4>
@@ -124,7 +124,7 @@
                 </div>
             </div>
 
-
+-->
 
 
         </section>

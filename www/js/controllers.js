@@ -1,4 +1,6 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', [
+    'ngResource'
+])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
@@ -100,25 +102,23 @@ angular.module('starter.controllers', [])
 
 
 // Clientes
-.controller('ClientesCtrl', function($scope, $stateParams, $ionicModal) {
-    $scope.clientes = [{
-        title: 'Filipe Raiz',
-        id: 1
-    }, {
-        title: 'Renato Filho',
-        id: 2
-    }, {
-        title: 'Gustavo Carvalho',
-        id: 3
-    }, {
-        title: 'Gabriel',
-        id: 4
-    }];
+.controller('ClientesCtrl', function($scope, $stateParams, $ionicModal, ClienteService) {
+    $scope.clientes = ClienteService.clientes;
 })
 
-.controller('addClienteCtrl', function($scope, $stateParams) {})
+.controller('addClienteCtrl', function($scope, $stateParams, ClienteService) {
+    $scope.salvarCliente = ClienteService.salvarCliente;
+})
 
-.controller('itemClienteCtrl', function($scope, $stateParams) {})
+.controller('editClienteCtrl', function($scope, $stateParams, ClienteService) {
+    $scope.object = ClienteService.get($stateParams.cliente_id);
+    $scope.object.birthdate = new Date($scope.object.birthdate);
+    $scope.salvarCliente = ClienteService.salvarCliente;
+})
+
+.controller('itemClienteCtrl', function($scope, $stateParams, ClienteService) {
+    $scope.cliente = ClienteService.get($stateParams.item_clienteId);
+})
 
 
 // Financeiro
@@ -175,19 +175,7 @@ angular.module('starter.controllers', [])
 })
 
 
-
-
-
 // Agendamentos
-
-
-
-
-
-
-
-
-
 .controller('addAgendamentoCtrl', function($scope, $stateParams) {})
 
 
@@ -226,7 +214,52 @@ angular.module('starter.controllers', [])
         title: 'nota 6',
         id: 9
     }];
+})
 
+.factory('Cliente', function($resource) {
+    return $resource('http://localhost:8000/api/v1/client/:id/', {id: '@id'}, {update: {method: 'PUT'}});
+})
 
-
+.service('ClienteService', function(Cliente, $location) {
+    var self = {
+        'clientes': [],
+        'page': 1,
+        'carregando': false,
+        'temProxima': true,
+        'temAnterior': false,
+        'get': function(id) {
+            return Cliente.get({id: id});
+        },
+        'carregarClientes': function() {
+            if (!self.carregando) {
+                self.carregando = true;
+                var params = {
+                    page: self.page
+                };
+                Cliente.get(params, function(data) {
+                    angular.forEach(data.results, function(cliente) {
+                        self.clientes.push(new Cliente(cliente));
+                    });
+                    self.temProxima = data.next;
+                    self.temAnterior = !!data.previous;
+                    self.carregando = false;
+                });
+            }
+        },
+        'salvarCliente': function(cliente, update) {
+            var new_client = angular.copy(cliente);
+            var birthdate = new Date(new_client.birthdate);
+            new_client.birthdate = birthdate.toJSON().split('T')[0];
+            if (!update) {
+                Cliente.save(new_client).$promise.then(function () {});
+            } else {
+                delete new_client.picture;
+                Cliente.update(new_client).$promise.then(function () {
+                    $location.path("/app/clientes");
+                });
+            }
+        }
+    };
+    self.carregarClientes();
+    return self;
 });

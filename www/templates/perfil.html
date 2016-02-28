@@ -9,13 +9,13 @@
         <section class="box-cliente">
             <div class="box-detail-cliente item-widget">
                 <div class="widget-header">
-                    <h4 class="titulo">Filipe Raiz</h4>
+                    <h4 class="titulo">{{ cliente.name }}</h4>
                 </div>
                 <div class="widget-body">
                     <ul class="widget-list-info">
                         <li>
                             <div class="info-picture">
-                                <p><img ng-src="img/uploads/foto-user.jpg"></p>
+                                <p><img ng-src="{{ cliente.picture }}"></p>
                             </div>
                         </li>
                         <li>
@@ -23,7 +23,7 @@
                                 <p>Tipo</p>
                             </div>
                             <div class="info-detail">
-                                <p>Fisica</p>
+                                <p>{{ cliente.type }}</p>
                             </div>
                         </li>
                         <li>

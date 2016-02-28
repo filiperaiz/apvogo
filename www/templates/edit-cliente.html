@@ -1,12 +1,12 @@
-<ion-view view-title="Novo cliente">
+<ion-view view-title="Editar cliente">
     <ion-content has-header="false" class="">
 
-        <form ng-submit="salvarCliente(object, false)">
+        <form ng-submit="salvarCliente(object, true)">
             <div class="item-widget">
                 <div class="list">
                     <label class="item item-input item-stacked-label">
                         <span class="input-label">Foto</span>
-                        <input type="file" ng-model="object.picture" placeholder="">
+                        <!--<input type="file" ng-model="object.picture" placeholder="">-->
                     </label>
                 </div>
             </div>
@@ -78,13 +78,9 @@
 
             <div class="padding">
                  <button class="button button-balanced button-block">
-                 Salvar cliente
+                 Atualizar cliente
                 </button>
             </div>
-
         </form>
-
-
-
     </ion-content>
 </ion-view>

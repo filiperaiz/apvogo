@@ -24,8 +24,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
-
+.config(function($stateProvider, $urlRouterProvider, $resourceProvider) {
+    $resourceProvider.defaults.stripTrailingSlashes = false;
 // Base
     $stateProvider
         .state('login', {
@@ -138,6 +138,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
             'menuContent': {
                 templateUrl: 'templates/add-cliente.html',
                 controller: 'addClienteCtrl'
+            }
+        }
+    })
+    .state('app.edit-cliente', {
+        url: '/clientes/editar/:cliente_id',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/edit-cliente.html',
+                controller: 'editClienteCtrl'
             }
         }
     })
